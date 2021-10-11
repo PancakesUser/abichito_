@@ -1,0 +1,194 @@
+/* Imports */
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    overflow: hidden;
+    scroll-behavior: smooth;
+    visibility: hidden;
+    background: #00B4DB;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #0083B0, #00B4DB);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #0083B0, #00B4DB); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+::-webkit-scrollbar{
+    width: 0px;
+}
+
+#preloader{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    visibility: visible;
+    width: 100%;
+    height: 100vh;
+    background: #00B4DB;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #0083B0, #00B4DB);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #0083B0, #00B4DB); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+}
+
+.preloader__contenido{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20%;
+}
+
+.preloader__contenido img{
+    margin-bottom: 20px;
+    animation: preload 500ms linear infinite;
+}
+
+@keyframes preload{
+    0%{margin-left: 0px;}
+    20%{margin-right: 30px;}
+    30%{margin-left: -30px;}
+    40%{margin-right: 30px;}
+}
+
+.preloader__contenido h2{
+    font-family: 'Oswald', san;
+    color: white;
+    font-size: 30px;
+}
+
+/* Web */
+
+#sidebar{
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    width: 200px;
+    height: 100%;
+    background-color: black;
+    transition: 500ms all linear;
+}
+
+.active{
+    left: -200px;
+}
+
+#sidebar ul li{
+    color: white;
+    text-align: center;
+    padding: 15px 10px;
+    border-bottom: 1px solid white;
+    font-family: 'Whitney';
+}
+
+#sidebar ul li:nth-child(1):hover{
+    background-color: black;
+    cursor: pointer;
+}
+
+#sidebar ul li:nth-child(3):hover{
+    background-color: #9146ff;
+}
+
+#sidebar ul li:nth-child(4):hover{
+    background-color: red;
+}
+
+#sidebar ul li:nth-child(6):hover{
+    background-color: cadetblue;
+}
+
+#sidebar ul li:nth-child(5):hover{
+    background-color: cadetblue;
+}
+
+
+#sidebar ul li:hover{
+    background-color: gray;
+}
+
+.abichito__logo{
+    border-radius: 100%;
+    border: 4px solid cyan;
+    text-align: center;
+}
+
+.sidebar__bio{
+    color: white;
+    font-family: 'Whitney';
+    border-bottom: 1px solid white;
+}
+
+.toggle__btn{
+    position: absolute;
+    left: 220px;
+    top: 20px;
+    cursor: pointer;
+}
+
+#sidebar .toggle__btn span{
+    display: block;
+    width: 40px;
+    text-align: center;
+    font-size: 30px;
+    border: 1px solid black;
+    border-radius: 8px;
+    background-color: orange;
+
+}
+
+/* Twitch */
+#twitch-embed{
+    width: 90%;
+    height: 450px;
+    margin-left: 144px;
+    overflow: hidden;
+}
+
+
+
+#emotes{
+    width: fit-content;
+    height: 100%;
+    margin-top: 250px;
+    margin-left: 250px;
+}
+
+.emotes__titulo{
+    color: white;
+    text-align: center;
+    font-family: 'Whitney';
+    font-size: 25px;
+    width: 100%;
+}
+
+.emotes__contenido{
+    flex-wrap: wrap;
+    width: fit-content;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.emotes__contenido img{
+    width: 80px;
+}
+
+.emotes__contenido img:hover{
+    transform: translateY(10px);
+}
+
+
+/* Etc */
+@media only screen and (max-width: 812px) {
+    #twitch-embed{
+        width: 0;
+        height: 0;
+    }
+
+}
