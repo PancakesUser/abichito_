@@ -3,6 +3,4 @@ new Twitch.Embed("twitch-embed", {
     height: 480,
     autoplay: false,
     channel: "abichito_",
-    // Only needed if this page is going to be embedded on other websites
-    parent: ["https://pancakesuser.github.io/abichito_/"]
   });
